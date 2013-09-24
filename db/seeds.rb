@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ 
+movie = Movie.create(title: 'Gone in 60 Seconds')
+league = League.create(league_name: 'Gone in 40 Seconds')
+user = User.create(name: 'Gone')
+
+league.users << user
+user.movies << movie
