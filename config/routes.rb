@@ -1,5 +1,8 @@
 FantasyBoxOffice::Application.routes.draw do
+  root :to => "leagues#index"
+
   devise_for :users
+  resources :leagues, :users, :movies
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -15,3 +15,9 @@ group :development, :test do
 end
 
 gem 'heroku'
+
+gem 'nokogiri'
+
+gem 'tmdb-api'
+
+gem 'pry'
