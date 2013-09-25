@@ -11,5 +11,5 @@
 
 <% total_fantasy_score = (@movie.total_box_office.gsub("$","").gsub(",","").to_f)/(@movie.budget.gsub("$","").to_f*1000000) %>
 
-<p>Most Recent Weekend Score: <%= wknd_fantasy_score * 10 %></p>
-<p>Lifetime Score: <%= total_fantasy_score * 10 %></p>
+<p>Most Recent Weekend Score: <%= wknd_fantasy_score * 100 %></p>
+<p>Lifetime Score: <%= total_fantasy_score * 100 %></p>

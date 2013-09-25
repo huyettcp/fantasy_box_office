@@ -1,4 +1,5 @@
 <h1>Movies</h1>
+<h2>Sorted Weekend Gross</h2>
 <% @movies.each do |movie| %>
-  <li><%= movie.title %></li>
+  <a href="/movies/<%= movie.id %>"><li><%= movie.title %></li></a>
 <% end %>
