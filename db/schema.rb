@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130925135830) do
+ActiveRecord::Schema.define(:version => 20130925203150) do
 
   create_table "leagues", :force => true do |t|
     t.integer  "number_of_members"
@@ -24,12 +24,12 @@ ActiveRecord::Schema.define(:version => 20130925135830) do
 
   create_table "movies", :force => true do |t|
     t.string   "title"
-    t.integer  "budget"
-    t.integer  "box_office_performance"
+    t.string   "budget"
+    t.string   "box_office_performance"
     t.integer  "user_id"
     t.datetime "created_at",             :null => false
     t.datetime "updated_at",             :null => false
-    t.integer  "total_box_office"
+    t.string   "total_box_office"
   end
 
   create_table "user_movie_picks", :id => false, :force => true do |t|

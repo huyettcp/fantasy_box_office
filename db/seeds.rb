@@ -12,20 +12,20 @@ require 'open-uri'
 
 n = Nokogiri::HTML(open("http://www.boxofficemojo.com/weekend/chart/?view=main&yr=2013&wknd=38&p=.htm"))
     noko = 1
-    # title = n.search("//table/tr/td[1]/table/tr[#{noko}]/td[3]").text
+    title = n.search("//table/tr/td[1]/table/tr[#{noko}]/td[3]").text
 
-    title = "t"
+    #title = "t"
 
     while title != ''
 
       #Returns weekend gross of 1 movie
-      box_office_performance = n.search("//table/tr/td[1]/table/tr[#{noko}]/td[5]").text
+      box_office_performance = n.search("//table/tr/td[1]/table/tr[#{noko+1}]/td[5]").text
 
       #Returns total gross of 1 movie
-      total_box_office = n.search("//table/tr/td[1]/table/tr[#{noko}]/td[10]").text
+      total_box_office = n.search("//table/tr/td[1]/table/tr[#{noko+1}]/td[10]").text
 
       #Returns budget of 1 movie
-      budget = n.search("//table/tr/td[1]/table/tr[#{noko}]/td[11]").text
+      budget = n.search("//table/tr/td[1]/table/tr[#{noko+1}]/td[11]").text
 
 
       noko+=1
