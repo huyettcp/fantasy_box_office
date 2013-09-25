@@ -18,6 +18,6 @@ gem 'heroku'
 
 gem 'nokogiri'
 
-gem 'tmdb-api'
+
 
 gem 'pry'
