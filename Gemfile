@@ -24,3 +24,8 @@ gem 'pry'
 
 
 gem 'skeleton-rails'
+
+group :assets do
+gem 'uglifier', '>= 1.0.3'
+
+end
