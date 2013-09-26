@@ -1,5 +1,5 @@
 FantasyBoxOffice::Application.routes.draw do
-  root :to => "home#index"
+  root :to => 'home#index'
 
   devise_for :users
   get '/movies' => 'movies#index'
@@ -8,6 +8,7 @@ FantasyBoxOffice::Application.routes.draw do
   get '/tests' => 'tests#index'
   get '/users' => 'users#index'
   get '/leagues' => 'leagues#index'
+  get '/home' => 'home#index'
 
 
   # The priority is based upon order of creation:

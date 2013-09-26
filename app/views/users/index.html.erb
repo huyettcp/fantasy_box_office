@@ -1,4 +1,13 @@
-<h1>Users</h1>
-<% @users.each do |user| %>
-  <li><%= user.email %></li>
-<% end %>
+<div class= 'eight columns'>
+  <div class = 'title_bar'>
+    <h1>Users</h1>
+  </div>
+  <div class = 'info'>
+    <% @users.each do |user| %>
+      <li><%= user.email %></li>
+    <% end %>
+  <div><a href= '/home'>Home</a></div>
+  <div><a href= '/movies'>Index of Movies</a></div>
+  <div><a href= '/leagues'>List of Leagues</a></div>
+  </div>
+</div>

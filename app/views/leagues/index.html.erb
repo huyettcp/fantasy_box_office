@@ -1,4 +1,15 @@
-<h1>League Lobby</h1>
-<% @leagues.each do |league| %>
-  <li><%= league.league_name %></li>
-<% end %>
+<div class= 'eight columns'>
+  <div class = 'title_bar'>
+    <h1>Leagues</h1>
+  </div>
+  <div class = 'info'>
+
+    <% @leagues.each do |league| %>
+      <li><%= league.league_name %></li>
+    <% end %>
+  <div><a href= '/home'>Home</a></div>
+  <div><a href= '/movies'>Index of Movies</a></div>
+  <div><a href= '/users'>List of Users</a></div>
+
+</div>
+</div>
