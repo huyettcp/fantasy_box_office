@@ -1,10 +1,10 @@
 <div class = 'eight columns'>
   <div class = 'title_bar'><h1>Fantasy Box Office Reference Guide</h1></div>
   <div class = 'info' >
-  <div class ='description'><h5>Top earners that are currently in theaters.</h5></div>
+  <div class ='description'><h5>Movies sorted by most recent weekend performance.</h5></div>
   <% @movies.each do |movie| %>
-    <li><a href="/movies/<%= movie.id %>"><%= movie.title %></a></li>
-  <p><%= movie.total_box_office %></p>
+    <li><a href="/movie/<%= movie.id %>"><%= movie.title %></a></li>
+  <p><%= movie.box_office_performance %></p>
   <% end %>
   </div>
 </div>

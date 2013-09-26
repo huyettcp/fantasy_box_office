@@ -10,6 +10,9 @@ class MoviesController < ApplicationController
     @total_fantasy_score = (@movie.total_box_office.gsub("$","").gsub(",","").to_f)/(@movie.budget.gsub("$","").to_f*1000000) 
   end
   def high_scores
-    @movies = Movie.all
+    @movies = Movie.all(params[:total_box_office])
+   
+  
+
   end
 end
