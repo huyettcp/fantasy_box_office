@@ -1,15 +1,20 @@
-<title><%= @movie.title %></title>
-<h1><%= @movie.title %></h1>
-<p>Budget: $<%= @movie.budget.gsub("$","").to_i*1000000 %></p>
-<h2>Box Office Numbers</h2>
-<p>Most recent weekend: $<%= @movie.box_office_performance.gsub("$","").gsub(",","").to_i %></p>
-<p>Total box office gross: $<%= @movie.total_box_office.gsub("$","").gsub(",","").to_i %></p> 
-<h2>Fantasy Box Office Breakdown</h2>
+<div class = 'eight columns'>
+  
+  <h1 class = 'title_bar'><%= @movie.title %></h1>
+  <div class = 'info' >
+  
+  <h4>Box Office Numbers</h4>
+  <p>Budget: $<%= @movie.budget.gsub("$","").to_i*1000000 %></p>
+  <p>Most recent weekend: $<%= @movie.box_office_performance.gsub("$","").gsub(",","").to_i %></p>
+  <p>Total box office gross: $<%= @movie.total_box_office.gsub("$","").gsub(",","").to_i %></p> 
+  <h4>Fantasy Box Office Breakdown</h4>
 
-<% wknd_fantasy_score = (@movie.box_office_performance.gsub("$","").gsub(",","").to_i)/(@movie.budget.gsub("$","").to_f*1000000) %>
+  <% @wknd_fantasy_score %>
 
 
-<% total_fantasy_score = (@movie.total_box_office.gsub("$","").gsub(",","").to_f)/(@movie.budget.gsub("$","").to_f*1000000) %>
+  <% @total_fantasy_score %>
 
-<p>Most Recent Weekend Score: <%= wknd_fantasy_score * 100 %></p>
-<p>Lifetime Score: <%= total_fantasy_score * 100 %></p>
+  <p>Most Recent Weekend Score: <%= @wknd_fantasy_score * 100 %></p>
+  <p>Lifetime Score: <%= @total_fantasy_score * 100 %></p>
+</div>
+</div>

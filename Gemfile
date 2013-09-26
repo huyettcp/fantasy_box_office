@@ -21,3 +21,6 @@ gem 'nokogiri'
 
 
 gem 'pry'
+
+
+gem 'skeleton-rails'

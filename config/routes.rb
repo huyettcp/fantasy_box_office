@@ -3,7 +3,8 @@ FantasyBoxOffice::Application.routes.draw do
 
   devise_for :users
   get '/movies' => 'movies#index'
-  get '/movies/:id' => 'movies#show'
+  get '/movie/:id' => 'movies#show'
+  get '/movies/high_scores' => 'movies#high_scores'
   get '/tests' => 'tests#index'
   get '/users' => 'users#index'
 

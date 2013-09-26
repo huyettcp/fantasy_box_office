@@ -1,5 +1,12 @@
-<h1>Movies</h1>
-<h2>Sorted Weekend Gross</h2>
-<% @movies.each do |movie| %>
-  <a href="/movies/<%= movie.id %>"><li><%= movie.title %></li></a>
-<% end %>
+<div class = 'eight columns'>
+  <div class = 'title_bar'><h1>Fantasy Box Office Reference Guide</h1></div>
+  <div class = 'info' >
+  <div class ='description'><h5>Movies sorted by most recent weekend performance.</h5></div>
+  <% @movies.each do |movie| %>
+    <li><a href="/movie/<%= movie.id %>"><%= movie.title %></a></li>
+  <p><%= movie.box_office_performance %></p>
+  <% end %>
+  </div>
+</div>
+
+
