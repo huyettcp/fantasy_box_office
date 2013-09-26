@@ -5,7 +5,7 @@ FantasyBoxOffice::Application.routes.draw do
   get '/movies' => 'movies#index'
   get '/movies/:id' => 'movies#show'
   get '/tests' => 'tests#index'
-
+  get '/users' => 'users#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
