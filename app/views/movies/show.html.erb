@@ -13,7 +13,7 @@
   <p>Lifetime Score: <%= @total_percentage.round %></p>
 
   <h5>Bomb Numbers</h5>
-  <p>Most Recent Weekend Bomb Score: <%= @wknd_bomb_score.abs.round %></p>
+  <p>Most Recent Weekend Bomb Score: <%= (@wknd_bomb_score * -1).round %></p>
 
   <p>Lifetime Bomb Score: <%= (@total_bomb_score * -1).round %></p>
   <div><a href= '/home'>Home</a></div>
