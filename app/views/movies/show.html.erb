@@ -4,18 +4,18 @@
   <div class = 'info' >
   
   <h4>Box Office Numbers</h4>
-  <p>Budget: $<%= @budget %></p>
-  <p>Most recent weekend: $<%= @movie.box_office_performance.gsub("$","").gsub(",","").to_i %></p>
-  <p>Total box office gross: $<%= @movie.total_box_office.gsub("$","").gsub(",","").to_i %></p> 
+  <p>Budget: $<%= number_with_delimiter(@budget) %></p>
+  <p>Most recent weekend: $<%= number_with_delimiter(@movie.box_office_performance.gsub("$","").gsub(",","").to_i) %></p>
+  <p>Total box office gross: $<%= number_with_delimiter(@movie.total_box_office.gsub("$","").gsub(",","").to_i) %></p> 
   <h4>Fantasy Box Office Breakdown</h4>
   <h5>Regular Numbers</h5>
-  <p>Most Recent Weekend Score: <%= @most_recent_percentage %></p>
-  <p>Lifetime Score: <%= @total_percentage %></p>
+  <p>Most Recent Weekend Score: <%= @most_recent_percentage.round %></p>
+  <p>Lifetime Score: <%= @total_percentage.round %></p>
 
   <h5>Bomb Numbers</h5>
-  <p>Most Recent Weekend Bomb Score: <%= @wknd_bomb_score.abs %></p>
+  <p>Most Recent Weekend Bomb Score: <%= @wknd_bomb_score.abs.round %></p>
 
-  <p>Lifetime Bomb Score: <%= @total_bomb_score.abs %></p>
+  <p>Lifetime Bomb Score: <%= @total_bomb_score.abs.round %></p>
   <div><a href= '/home'>Home</a></div>
   <div><a href= '/movies'>Index of Movies</a></div>
   <div><a href= '/leagues'>List of Leagues</a></div>
