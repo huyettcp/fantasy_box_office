@@ -15,7 +15,7 @@
   <h5>Bomb Numbers</h5>
   <p>Most Recent Weekend Bomb Score: <%= @wknd_bomb_score.abs.round %></p>
 
-  <p>Lifetime Bomb Score: <%= @total_bomb_score.abs.round %></p>
+  <p>Lifetime Bomb Score: <%= (@total_bomb_score * -1).round %></p>
   <div><a href= '/home'>Home</a></div>
   <div><a href= '/movies'>Index of Movies</a></div>
   <div><a href= '/leagues'>List of Leagues</a></div>
